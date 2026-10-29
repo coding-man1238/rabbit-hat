@@ -9,7 +9,7 @@ radius = 8.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i8luw"]
 size = Vector2(16, 16)
 
-[node name="Player" type="CharacterBody2D" unique_id=1847577550]
+[node name="Player" type="CharacterBody2D" unique_id=1847577550 groups=["player"]]
 collision_mask = 16
 script = ExtResource("1_abrql")
 
