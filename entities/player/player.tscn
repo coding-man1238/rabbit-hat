@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://drioi8wh4onkx" path="res://entities/player/Player.cs" id="1_abrql"]
 [ext_resource type="Texture2D" uid="uid://b3tp4437b8h2r" path="res://icon.svg" id="2_sglur"]
+[ext_resource type="Script" uid="uid://dpuhcn7ybtpps" path="res://entities/player/InventoryContainer.cs" id="3_bls4j"]
 [ext_resource type="PackedScene" uid="uid://bejb5xghv1e44" path="res://ui/item_container.tscn" id="3_sglur"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i8luw"]
@@ -37,7 +38,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="UI/Control" unique_id=773567100]
+[node name="InventoryContainer" type="PanelContainer" parent="UI/Control" unique_id=773567100]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.372
@@ -46,95 +47,97 @@ offset_left = 28.0
 offset_top = 28.0
 offset_right = 31.455994
 offset_bottom = -229.86401
+script = ExtResource("3_bls4j")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/Control/PanelContainer" unique_id=335474220]
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Control/InventoryContainer" unique_id=335474220]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="UI/Control/PanelContainer/VBoxContainer" unique_id=273089929]
+[node name="MarginContainer" type="MarginContainer" parent="UI/Control/InventoryContainer/VBoxContainer" unique_id=273089929]
 layout_mode = 2
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
 
-[node name="ScrollContainer" type="ScrollContainer" parent="UI/Control/PanelContainer/VBoxContainer/MarginContainer" unique_id=546925335]
+[node name="ScrollContainer" type="ScrollContainer" parent="UI/Control/InventoryContainer/VBoxContainer/MarginContainer" unique_id=546925335]
 custom_minimum_size = Vector2(0, 72)
 layout_mode = 2
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 3
 
-[node name="GridContainer" type="GridContainer" parent="UI/Control/PanelContainer/VBoxContainer/MarginContainer/ScrollContainer" unique_id=1797164438]
+[node name="GridContainer" type="GridContainer" parent="UI/Control/InventoryContainer/VBoxContainer/MarginContainer/ScrollContainer" unique_id=1797164438]
 layout_mode = 2
 theme_override_constants/h_separation = 12
 theme_override_constants/v_separation = 12
 columns = 5
 
-[node name="ItemContainer" parent="UI/Control/PanelContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=55015199 instance=ExtResource("3_sglur")]
+[node name="ItemContainer" parent="UI/Control/InventoryContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=55015199 instance=ExtResource("3_sglur")]
 layout_mode = 2
 
-[node name="ItemContainer2" parent="UI/Control/PanelContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=578482632 instance=ExtResource("3_sglur")]
+[node name="ItemContainer2" parent="UI/Control/InventoryContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=578482632 instance=ExtResource("3_sglur")]
 layout_mode = 2
 
-[node name="ItemContainer3" parent="UI/Control/PanelContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=2141036018 instance=ExtResource("3_sglur")]
+[node name="ItemContainer3" parent="UI/Control/InventoryContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=2141036018 instance=ExtResource("3_sglur")]
 layout_mode = 2
 
-[node name="ItemContainer4" parent="UI/Control/PanelContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=982143162 instance=ExtResource("3_sglur")]
+[node name="ItemContainer4" parent="UI/Control/InventoryContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=982143162 instance=ExtResource("3_sglur")]
 layout_mode = 2
 
-[node name="ItemContainer5" parent="UI/Control/PanelContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=2146478293 instance=ExtResource("3_sglur")]
+[node name="ItemContainer5" parent="UI/Control/InventoryContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=2146478293 instance=ExtResource("3_sglur")]
 layout_mode = 2
 
-[node name="ItemContainer6" parent="UI/Control/PanelContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=991939127 instance=ExtResource("3_sglur")]
+[node name="ItemContainer6" parent="UI/Control/InventoryContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=991939127 instance=ExtResource("3_sglur")]
 layout_mode = 2
 
-[node name="ItemContainer7" parent="UI/Control/PanelContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=1614653395 instance=ExtResource("3_sglur")]
+[node name="ItemContainer7" parent="UI/Control/InventoryContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=1614653395 instance=ExtResource("3_sglur")]
 layout_mode = 2
 
-[node name="ItemContainer8" parent="UI/Control/PanelContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=1828735583 instance=ExtResource("3_sglur")]
+[node name="ItemContainer8" parent="UI/Control/InventoryContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=1828735583 instance=ExtResource("3_sglur")]
 layout_mode = 2
 
-[node name="ItemContainer9" parent="UI/Control/PanelContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=1897663911 instance=ExtResource("3_sglur")]
+[node name="ItemContainer9" parent="UI/Control/InventoryContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=1897663911 instance=ExtResource("3_sglur")]
 layout_mode = 2
 
-[node name="ItemContainer10" parent="UI/Control/PanelContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=32760936 instance=ExtResource("3_sglur")]
+[node name="ItemContainer10" parent="UI/Control/InventoryContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=32760936 instance=ExtResource("3_sglur")]
 layout_mode = 2
 
-[node name="ItemContainer11" parent="UI/Control/PanelContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=1927468146 instance=ExtResource("3_sglur")]
+[node name="ItemContainer11" parent="UI/Control/InventoryContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=1927468146 instance=ExtResource("3_sglur")]
 layout_mode = 2
 
-[node name="ItemContainer12" parent="UI/Control/PanelContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=429043620 instance=ExtResource("3_sglur")]
+[node name="ItemContainer12" parent="UI/Control/InventoryContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=429043620 instance=ExtResource("3_sglur")]
 layout_mode = 2
 
-[node name="ItemContainer13" parent="UI/Control/PanelContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=197383561 instance=ExtResource("3_sglur")]
+[node name="ItemContainer13" parent="UI/Control/InventoryContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=197383561 instance=ExtResource("3_sglur")]
 layout_mode = 2
 
-[node name="ItemContainer14" parent="UI/Control/PanelContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=1556023407 instance=ExtResource("3_sglur")]
+[node name="ItemContainer14" parent="UI/Control/InventoryContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=1556023407 instance=ExtResource("3_sglur")]
 layout_mode = 2
 
-[node name="ItemContainer15" parent="UI/Control/PanelContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=1637996049 instance=ExtResource("3_sglur")]
+[node name="ItemContainer15" parent="UI/Control/InventoryContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=1637996049 instance=ExtResource("3_sglur")]
 layout_mode = 2
 
-[node name="ItemContainer16" parent="UI/Control/PanelContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=1243687946 instance=ExtResource("3_sglur")]
+[node name="ItemContainer16" parent="UI/Control/InventoryContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=1243687946 instance=ExtResource("3_sglur")]
 layout_mode = 2
 
-[node name="ItemContainer17" parent="UI/Control/PanelContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=1079160653 instance=ExtResource("3_sglur")]
+[node name="ItemContainer17" parent="UI/Control/InventoryContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=1079160653 instance=ExtResource("3_sglur")]
 layout_mode = 2
 
-[node name="ItemContainer18" parent="UI/Control/PanelContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=568943101 instance=ExtResource("3_sglur")]
+[node name="ItemContainer18" parent="UI/Control/InventoryContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=568943101 instance=ExtResource("3_sglur")]
 layout_mode = 2
 
-[node name="ItemContainer19" parent="UI/Control/PanelContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=2082336920 instance=ExtResource("3_sglur")]
+[node name="ItemContainer19" parent="UI/Control/InventoryContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=2082336920 instance=ExtResource("3_sglur")]
 layout_mode = 2
 
-[node name="ItemContainer20" parent="UI/Control/PanelContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=1810190717 instance=ExtResource("3_sglur")]
+[node name="ItemContainer20" parent="UI/Control/InventoryContainer/VBoxContainer/MarginContainer/ScrollContainer/GridContainer" unique_id=1810190717 instance=ExtResource("3_sglur")]
 layout_mode = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="UI/Control/PanelContainer/VBoxContainer" unique_id=977146414]
+[node name="CenterContainer" type="CenterContainer" parent="UI/Control/InventoryContainer/VBoxContainer" unique_id=977146414]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="UI/Control/PanelContainer/VBoxContainer/CenterContainer" unique_id=2069328244]
+[node name="TextureRect" type="Button" parent="UI/Control/InventoryContainer/VBoxContainer/CenterContainer" unique_id=2039005275]
 custom_minimum_size = Vector2(80, 12)
 layout_mode = 2
-texture = ExtResource("2_sglur")
-expand_mode = 1
+theme_override_font_sizes/font_size = 8
+text = "^"
 
 [connection signal="area_entered" from="HurtBox" to="." method="OnHit"]
+[connection signal="pressed" from="UI/Control/InventoryContainer/VBoxContainer/CenterContainer/TextureRect" to="UI/Control/InventoryContainer" method="ToggleSize"]
