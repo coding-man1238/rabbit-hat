@@ -13,5 +13,10 @@ public partial class Player : Entity
         Velocity = dir * SPEED;
     }
 
+    public override void OnNoHealth()
+    {
+        GD.Print("died");
+    }
+
     public override void _PhysicsProcess(double delta) => MoveAndSlide();
 }

@@ -16,6 +16,11 @@ public abstract partial class Entity: CharacterBody2D
         }
     }
 
+    public virtual void OnNoHealth()
+    {
+        QueueFree();
+    }
+
     private void OnHit(Area2D area)
     {
         GD.Print("collided");
