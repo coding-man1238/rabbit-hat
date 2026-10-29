@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://gxoa45boxhnh"]
+
+[ext_resource type="Script" uid="uid://drioi8wh4onkx" path="res://entities/player/Player.cs" id="1_abrql"]
+[ext_resource type="Texture2D" uid="uid://b3tp4437b8h2r" path="res://icon.svg" id="2_sglur"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i8luw"]
+radius = 8.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i8luw"]
+size = Vector2(16, 16)
+
+[node name="Player" type="CharacterBody2D" unique_id=1847577550]
+collision_mask = 16
+script = ExtResource("1_abrql")
+
+[node name="TempSprite" type="Sprite2D" parent="." unique_id=1901100546]
+scale = Vector2(0.125, 0.12500001)
+texture = ExtResource("2_sglur")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1654004752]
+shape = SubResource("CircleShape2D_i8luw")
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=746787742]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1197502671]
+shape = SubResource("RectangleShape2D_i8luw")
+debug_color = Color(0.9582632, 3.85046e-07, 0.5307349, 0.41960785)
