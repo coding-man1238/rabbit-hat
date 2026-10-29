@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bejb5xghv1e44"]
+
+[ext_resource type="Texture2D" uid="uid://b3tp4437b8h2r" path="res://icon.svg" id="1_lcimt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i8luw"]
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="ItemContainer" type="PanelContainer" unique_id=55015199]
+custom_minimum_size = Vector2(72, 72)
+offset_right = 18.0
+offset_bottom = 18.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_i8luw")
+metadata/_edit_vertical_guides_ = [17.0, 1.0]
+metadata/_edit_horizontal_guides_ = [17.0, 1.0]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1863836960]
+layout_mode = 2
+texture = ExtResource("1_lcimt")
+expand_mode = 1
