@@ -1,3 +1,28 @@
 [gd_scene format=3 uid="uid://dhewuy4c4ppye"]
 
-[node name="TestEnemy" type="CharacterBody2D" unique_id=929357672]
+[ext_resource type="Script" uid="uid://dsva2p02mcxhp" path="res://entities/test-enemy/TestEnemy.cs" id="1_rv6e1"]
+[ext_resource type="Texture2D" uid="uid://b3tp4437b8h2r" path="res://icon.svg" id="2_l0gaq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l0gaq"]
+radius = 8.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c1hi5"]
+size = Vector2(16, 16)
+
+[node name="TestEnemy" type="CharacterBody2D" unique_id=929357672 node_paths=PackedStringArray("HurtBox")]
+script = ExtResource("1_rv6e1")
+HurtBox = NodePath("HurtBox")
+
+[node name="TempSprite" type="Sprite2D" parent="." unique_id=443254917]
+self_modulate = Color(1, 0, 0, 1)
+scale = Vector2(0.125, 0.12500001)
+texture = ExtResource("2_l0gaq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1087051350]
+shape = SubResource("CircleShape2D_l0gaq")
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=1347841274]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=416081859]
+shape = SubResource("RectangleShape2D_c1hi5")
+debug_color = Color(0.9582632, 3.85046e-07, 0.5307349, 0.41960785)
