@@ -12,4 +12,7 @@ public partial class AttackRes : Resource
 
 	  [Export]
 	  public Texture2D Icon { set; get; }
+
+	  [Export]
+	  public PackedScene AttackScene { set; get; }
 }

@@ -12,7 +12,7 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[node name="AttackContainer" type="PanelContainer" unique_id=1493978400 node_paths=PackedStringArray("TextureRect")]
+[node name="AttackContainer" type="PanelContainer" unique_id=1493978400 node_paths=PackedStringArray("TextureRect", "IndexLabel")]
 custom_minimum_size = Vector2(72, 72)
 offset_right = 72.0
 offset_bottom = 72.0
@@ -21,7 +21,14 @@ size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_kvw34")
 script = ExtResource("1_77vs0")
 TextureRect = NodePath("TextureRect")
+IndexLabel = NodePath("Label")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=2146003988]
 layout_mode = 2
 expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=1032865357]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = " 1"

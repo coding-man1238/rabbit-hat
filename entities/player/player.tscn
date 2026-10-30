@@ -2,9 +2,10 @@
 
 [ext_resource type="Script" uid="uid://drioi8wh4onkx" path="res://entities/player/Player.cs" id="1_abrql"]
 [ext_resource type="Texture2D" uid="uid://b3tp4437b8h2r" path="res://icon.svg" id="2_sglur"]
-[ext_resource type="Script" uid="uid://dpuhcn7ybtpps" path="res://entities/player/InventoryContainer.cs" id="3_bls4j"]
-[ext_resource type="PackedScene" uid="uid://bejb5xghv1e44" path="res://entities/player/ui/item_container.tscn" id="3_sglur"]
-[ext_resource type="PackedScene" uid="uid://b20dffgm5kox1" path="res://entities/player/ui/attack_container.tscn" id="5_fkugw"]
+[ext_resource type="Script" uid="uid://dpuhcn7ybtpps" path="res://entities/player/ui/InventoryContainer.cs" id="3_bls4j"]
+[ext_resource type="PackedScene" uid="uid://bejb5xghv1e44" path="res://ui/item_container.tscn" id="3_sglur"]
+[ext_resource type="PackedScene" uid="uid://b20dffgm5kox1" path="res://ui/attack_container.tscn" id="5_fkugw"]
+[ext_resource type="Script" uid="uid://bgkdxs184s1sa" path="res://entities/player/ui/AttackContainerHolder.cs" id="5_qiwj3"]
 [ext_resource type="Resource" uid="uid://cykyxes0o7jp5" path="res://test_attack.tres" id="6_8fjmc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i8luw"]
@@ -25,8 +26,8 @@ texture = ExtResource("2_sglur")
 shape = SubResource("CircleShape2D_i8luw")
 
 [node name="HurtBox" type="Area2D" parent="." unique_id=746787742]
-collision_layer = 4
-collision_mask = 2
+collision_layer = 8
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1197502671]
 shape = SubResource("RectangleShape2D_i8luw")
@@ -166,25 +167,26 @@ theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
 theme_override_constants/margin_bottom = 12
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UI/Control/AttackHotbar/MarginContainer" unique_id=953007817]
+[node name="AttackContainerHolder" type="HBoxContainer" parent="UI/Control/AttackHotbar/MarginContainer" unique_id=953007817]
 layout_mode = 2
 theme_override_constants/separation = 12
 alignment = 1
+script = ExtResource("5_qiwj3")
 
-[node name="AttackContainer" parent="UI/Control/AttackHotbar/MarginContainer/HBoxContainer" unique_id=1493978400 instance=ExtResource("5_fkugw")]
+[node name="AttackContainer" parent="UI/Control/AttackHotbar/MarginContainer/AttackContainerHolder" unique_id=1493978400 instance=ExtResource("5_fkugw")]
 layout_mode = 2
 AttackRes = ExtResource("6_8fjmc")
 
-[node name="AttackContainer2" parent="UI/Control/AttackHotbar/MarginContainer/HBoxContainer" unique_id=2009533203 instance=ExtResource("5_fkugw")]
+[node name="AttackContainer2" parent="UI/Control/AttackHotbar/MarginContainer/AttackContainerHolder" unique_id=2009533203 instance=ExtResource("5_fkugw")]
 layout_mode = 2
 
-[node name="AttackContainer3" parent="UI/Control/AttackHotbar/MarginContainer/HBoxContainer" unique_id=1547178045 instance=ExtResource("5_fkugw")]
+[node name="AttackContainer3" parent="UI/Control/AttackHotbar/MarginContainer/AttackContainerHolder" unique_id=1547178045 instance=ExtResource("5_fkugw")]
 layout_mode = 2
 
-[node name="AttackContainer4" parent="UI/Control/AttackHotbar/MarginContainer/HBoxContainer" unique_id=1626178679 instance=ExtResource("5_fkugw")]
+[node name="AttackContainer4" parent="UI/Control/AttackHotbar/MarginContainer/AttackContainerHolder" unique_id=1626178679 instance=ExtResource("5_fkugw")]
 layout_mode = 2
 
-[node name="AttackContainer5" parent="UI/Control/AttackHotbar/MarginContainer/HBoxContainer" unique_id=1998850605 instance=ExtResource("5_fkugw")]
+[node name="AttackContainer5" parent="UI/Control/AttackHotbar/MarginContainer/AttackContainerHolder" unique_id=1998850605 instance=ExtResource("5_fkugw")]
 layout_mode = 2
 
 [connection signal="area_entered" from="HurtBox" to="." method="OnHit"]

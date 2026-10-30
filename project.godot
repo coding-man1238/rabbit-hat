@@ -53,8 +53,10 @@ down={
 [layer_names]
 
 2d_physics/layer_1="Collision"
-2d_physics/layer_2="Attacks"
-2d_physics/layer_3="HurtBoxes"
+2d_physics/layer_2="AttacksPlayer"
+2d_physics/layer_3="AttacksOther"
+2d_physics/layer_4="HurtBoxesPlayer"
+2d_physics/layer_5="HurtBoxesOther"
 
 [physics]
 

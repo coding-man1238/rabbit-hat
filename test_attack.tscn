@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://h21g7bdvr0eg"]
+
+[ext_resource type="Texture2D" uid="uid://b3tp4437b8h2r" path="res://icon.svg" id="1_p0h6r"]
+[ext_resource type="Script" uid="uid://dd1uxvw5p3e2n" path="res://TestAttack.cs" id="1_tp0s4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i8luw"]
+radius = 6.0
+
+[node name="TestAttack" type="Node2D" unique_id=1430115821]
+script = ExtResource("1_tp0s4")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=954258681]
+self_modulate = Color(0, 1, 0.15294118, 1)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_p0h6r")
+
+[node name="HitArea" type="Area2D" parent="." unique_id=1766481973]
+collision_layer = 2
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea" unique_id=1322273887]
+shape = SubResource("CircleShape2D_i8luw")
