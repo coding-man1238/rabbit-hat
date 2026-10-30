@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b20dffgm5kox1"]
+
+[ext_resource type="Texture2D" uid="uid://b3tp4437b8h2r" path="res://icon.svg" id="1_afu78"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvw34"]
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="AttackContainer" type="PanelContainer" unique_id=1493978400]
+custom_minimum_size = Vector2(72, 72)
+offset_right = 72.0
+offset_bottom = 72.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_kvw34")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2146003988]
+layout_mode = 2
+texture = ExtResource("1_afu78")
+expand_mode = 1

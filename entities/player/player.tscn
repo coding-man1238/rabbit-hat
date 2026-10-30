@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b3tp4437b8h2r" path="res://icon.svg" id="2_sglur"]
 [ext_resource type="Script" uid="uid://dpuhcn7ybtpps" path="res://entities/player/InventoryContainer.cs" id="3_bls4j"]
 [ext_resource type="PackedScene" uid="uid://bejb5xghv1e44" path="res://ui/item_container.tscn" id="3_sglur"]
+[ext_resource type="PackedScene" uid="uid://b20dffgm5kox1" path="res://ui/attack_container.tscn" id="5_fkugw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i8luw"]
 radius = 8.0
@@ -142,6 +143,47 @@ custom_minimum_size = Vector2(80, 12)
 layout_mode = 2
 theme_override_font_sizes/font_size = 8
 text = "^"
+
+[node name="AttackHotbar" type="PanelContainer" parent="UI/Control" unique_id=1704417938]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.312
+anchor_top = 0.79300004
+anchor_right = 0.75000006
+anchor_bottom = 0.94100004
+offset_left = 28.575989
+offset_top = 24.135986
+offset_right = -100.00006
+offset_bottom = 0.23199463
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/Control/AttackHotbar" unique_id=851733107]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Control/AttackHotbar/MarginContainer" unique_id=953007817]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="AttackContainer" parent="UI/Control/AttackHotbar/MarginContainer/HBoxContainer" unique_id=1493978400 instance=ExtResource("5_fkugw")]
+layout_mode = 2
+
+[node name="AttackContainer2" parent="UI/Control/AttackHotbar/MarginContainer/HBoxContainer" unique_id=2009533203 instance=ExtResource("5_fkugw")]
+layout_mode = 2
+
+[node name="AttackContainer3" parent="UI/Control/AttackHotbar/MarginContainer/HBoxContainer" unique_id=1547178045 instance=ExtResource("5_fkugw")]
+layout_mode = 2
+
+[node name="AttackContainer4" parent="UI/Control/AttackHotbar/MarginContainer/HBoxContainer" unique_id=1626178679 instance=ExtResource("5_fkugw")]
+layout_mode = 2
+
+[node name="AttackContainer5" parent="UI/Control/AttackHotbar/MarginContainer/HBoxContainer" unique_id=1998850605 instance=ExtResource("5_fkugw")]
+layout_mode = 2
 
 [connection signal="area_entered" from="HurtBox" to="." method="OnHit"]
 [connection signal="pressed" from="UI/Control/InventoryContainer/VBoxContainer/CenterContainer/TextureRect" to="UI/Control/InventoryContainer" method="ToggleSize"]
