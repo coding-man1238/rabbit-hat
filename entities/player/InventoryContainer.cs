@@ -24,8 +24,5 @@ public partial class InventoryContainer : PanelContainer
 		get => _expanded;
 	}
 
-	public void ToggleSize()
-	{
-		
-	}
+	public void ToggleSize() => Expanded = !Expanded;
 }

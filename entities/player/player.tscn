@@ -12,7 +12,7 @@ radius = 8.0
 size = Vector2(16, 16)
 
 [node name="Player" type="CharacterBody2D" unique_id=1847577550 groups=["player"]]
-collision_mask = 16
+collision_layer = 0
 script = ExtResource("1_abrql")
 
 [node name="TempSprite" type="Sprite2D" parent="." unique_id=1901100546]
@@ -23,6 +23,8 @@ texture = ExtResource("2_sglur")
 shape = SubResource("CircleShape2D_i8luw")
 
 [node name="HurtBox" type="Area2D" parent="." unique_id=746787742]
+collision_layer = 4
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1197502671]
 shape = SubResource("RectangleShape2D_i8luw")
