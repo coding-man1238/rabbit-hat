@@ -15,7 +15,6 @@ public partial class InventoryContainer : PanelContainer
 		set
 		{
 			_expanded = value;
-			GD.Print("hello world");
 			if (ItemContainer is not null)
 			{
 				  ItemContainer.CustomMaximumSize = ItemContainer.CustomMaximumSize with { Y = value? 324:72 };
