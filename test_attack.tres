@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="AttackRes" format=3 uid="uid://cykyxes0o7jp5"]
 
 [ext_resource type="Texture2D" uid="uid://b3tp4437b8h2r" path="res://icon.svg" id="1_22yuh"]
+[ext_resource type="PackedScene" uid="uid://h21g7bdvr0eg" path="res://test_attack.tscn" id="1_ho6kq"]
 [ext_resource type="Script" uid="uid://bxky0ekxa07b2" path="res://AttackRes.cs" id="1_y6vdg"]
 
 [resource]
@@ -8,4 +9,5 @@ script = ExtResource("1_y6vdg")
 Name = "Test"
 Description = "IDK what do you want me to say dude"
 Icon = ExtResource("1_22yuh")
+AttackScene = ExtResource("1_ho6kq")
 metadata/_custom_type_script = "uid://bxky0ekxa07b2"

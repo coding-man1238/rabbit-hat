@@ -5,6 +5,7 @@ public partial class Player : Entity
 {
 	const float SPEED = 10f;
 
+	[Export]
 	public AttackContainerHolder AttackContainer { set; get; }
 
 	protected override float MaxHealth => 20f;
@@ -20,13 +21,20 @@ public partial class Player : Entity
 		GD.Print("died");
 	}
 
+	void AddAttack(Node2D attack)
+	{
+		  attack.GlobalPosition = GlobalPosition;
+		  attack.Set("Dir", GetLocalMousePosition().Normalized());
+		  GetParent().AddChild(attack);
+	}
+
 	public override void _Input(InputEvent @event)
 	{
 	  if (@event is InputEventKey event_key && event_key.Pressed)
 	  {
 			switch (event_key.AsTextKeycode())
 			{
-				case "1": AttackContainer.GetAttackNode(1); break;
+				  case "1": AddAttack(AttackContainer.GetAttackNode(0)); break;
 			}
 	  }
 	}
