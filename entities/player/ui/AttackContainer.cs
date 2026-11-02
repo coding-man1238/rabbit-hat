@@ -3,7 +3,6 @@ using System;
 
 public partial class AttackContainer : PanelContainer
 {
-
 	  [Export]
 	  public TextureRect @TextureRect { set; get; }
 
@@ -26,5 +25,8 @@ public partial class AttackContainer : PanelContainer
 			IndexLabel.Text = ' ' + (GetIndex() + 1).ToString();
 	  }
 
-	  public Node2D GetNode() => @AttackRes.AttackScene.Instantiate<Node2D>();
+	  public Node2D GetNode() {
+			if (@AttackRes is null) return null;
+			return @AttackRes.AttackScene.Instantiate<Node2D>();
+	  }
 }
