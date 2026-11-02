@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://bejb5xghv1e44" path="res://ui/item_container.tscn" id="3_sglur"]
 [ext_resource type="PackedScene" uid="uid://b20dffgm5kox1" path="res://ui/attack_container.tscn" id="5_fkugw"]
 [ext_resource type="Script" uid="uid://bgkdxs184s1sa" path="res://entities/player/ui/AttackContainerHolder.cs" id="5_qiwj3"]
-[ext_resource type="Resource" uid="uid://cykyxes0o7jp5" path="res://test_attack.tres" id="6_8fjmc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i8luw"]
 radius = 8.0
@@ -175,7 +174,6 @@ script = ExtResource("5_qiwj3")
 
 [node name="AttackContainer" parent="UI/Control/AttackHotbar/MarginContainer/AttackContainerHolder" unique_id=1493978400 instance=ExtResource("5_fkugw")]
 layout_mode = 2
-AttackRes = ExtResource("6_8fjmc")
 
 [node name="AttackContainer2" parent="UI/Control/AttackHotbar/MarginContainer/AttackContainerHolder" unique_id=2009533203 instance=ExtResource("5_fkugw")]
 layout_mode = 2
