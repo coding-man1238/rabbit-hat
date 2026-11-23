@@ -11,4 +11,10 @@ public partial class TestAttack : Node2D
 	  {
 			Position += Dir * SPEED * (float)delta;
 	  }
+
+	  public void Collided(Area2D area)
+	  {
+			GD.Print("died");
+		  	QueueFree();
+	  }
 }

@@ -11,6 +11,7 @@ public partial class TestEnemy : Entity
 
     public override void _Ready()
     {
+	  base._Ready();
         player_ref = (Player)GetTree().GetFirstNodeInGroup("player");
     }
 
