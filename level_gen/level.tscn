@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bn270rvy2ml0l"]
+
+[ext_resource type="Script" uid="uid://cwik4hamvdkwc" path="res://level_gen/Level.cs" id="1_inkkm"]
+
+[node name="level" type="Node2D" unique_id=1936588205]
+script = ExtResource("1_inkkm")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1243485544]
